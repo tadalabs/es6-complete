@@ -1,9 +1,10 @@
 {
   "name": "es6-complete",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "description": "a way to complete objects",
   "main": "dist/index.js",
   "keywords": "es6-javascript",
+  "engines" : { "node" : ">=10.0" },
   "author": {
     "email": "matt.that@gmail.com",
     "name": "Matt That",
@@ -18,7 +19,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/mattthat/es6-complete.git"
+    "url": "https://github.com/tadalabs/es6-complete.git"
   },
   "license": {
     "type": "Apache-2.0",
@@ -42,6 +43,7 @@
     "eslint-loader": "^2.1.1",
     "eslint-plugin-prettier": "^3.0.0",
     "mocha": "^5.2.0",
+    "nyc": "^13.1.0",
     "prettier": "^1.14.3"
   }
 }

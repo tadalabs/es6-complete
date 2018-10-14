@@ -4,7 +4,6 @@ import { expect } from 'chai';
 describe('complete', () => {
   it('should complete Me', () => {
       const expectation = () => {
-
           class Me {
               get foo() {
                   return 'foo';
@@ -33,7 +32,7 @@ describe('complete', () => {
           class SomeClass2 {}
           SomeClass2.foo = { bar: { foo: 'foo' } };
           complete(SomeClass2);
-          SomeClass2.foo.bar.foo ='bar';
+          SomeClass2.foo.bar.foo = 'bar';
       };
       expect(expectation).to.throw();
   });
@@ -46,9 +45,7 @@ describe('complete', () => {
                   complete(this);
               }
           }
-
-          const some = new SomeClass3();
-          some.foo = 'bar';
+          new SomeClass3().foo = 'bar';
       };
       expect(expectation).to.throw();
   });

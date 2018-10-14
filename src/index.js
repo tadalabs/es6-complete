@@ -1,12 +1,10 @@
-export default type => {
+export default that => {
   const complete = thing => {
-    if (typeof thing === 'object' || typeof thing === 'function') {
-      Object.freeze(thing);
-      Object.keys(thing).map(key => complete(key));
-      Object.values(thing).map(key => complete(key));
-    } else if (typeof thing === 'string') {
-      Object.freeze(thing);
+    Object.freeze(thing);
+    if (['object', 'function'].includes(typeof thing)) {
+      Object.keys(thing).map(complete);
+      Object.values(thing).map(complete);
     }
   };
-  complete(type);
+  complete(that);
 };
