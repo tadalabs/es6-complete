@@ -1,6 +1,6 @@
 {
   "name": "es6-complete",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "a way to complete objects",
   "main": "dist/index.js",
   "keywords": "es6-javascript",
