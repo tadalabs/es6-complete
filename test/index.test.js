@@ -46,10 +46,10 @@ describe('complete', () => {
                   complete(this);
               }
           }
-
           const some = new SomeClass3();
           some.foo = 'bar';
       };
       expect(expectation).to.throw();
   });
+
 });
